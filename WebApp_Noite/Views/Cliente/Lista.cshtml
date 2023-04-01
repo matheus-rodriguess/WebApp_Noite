@@ -4,18 +4,18 @@
 @{
 }
 
-<div class="row"> 
-    
+<div class="row">
+
     <div class="col-12">
         <div class="card-header">
-            <h2>Lista de Produtos</h2>
+            <h2>Lista de Clientes</h2>
         </div>
         <div class="card-body">
 
-            <div class=" row">
+            <div class="row">
                 <div class="col-2">
-                    <a href="/Produto/Cadastrar" class="btn btn-success">
-                        Novo Produto    
+                    <a href="/Cliente/Cadastrar" class="btn btn-success">
+                        Novo Cliente
                     </a>
                 </div>
                 <div class="col-4">
@@ -23,7 +23,7 @@
                         <option value="0">Todas opções</option>
                         <option value="id">Por Código</option>
                         <option value="nome">Por Nome</option>
-                        <option value="qtd">Por Quantidade</option>
+                        <option value="telefone">Telefone</option>
                     </select>
                 </div>
                 <div class="col-4">
@@ -35,60 +35,59 @@
                     </button>
                 </div>
             </div>
-            
-            <form action="/Produto/Pesquisa" method="get">
-                
+
+            <form action="/Cliente/Pesquisa" method="get">
             </form>
 
             <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Código</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Quantida em estoque</th>
-                    <th scope="col">Editar</th>
-                    <th scope="col">Excluir</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mouse Gamer</td>
-                    <td>150</td>
+                <thead>
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">1</td>
+                        <td>Emertinho Manager</td>
+                        <td>(XX)XXXXX-XXXX</td>
                         <td>
                             <a href="/Cliente/Editar/1" class="btn btn-warning">Editar</a>
                         </td>
-                        <td>
+                        <td> 
                             <a href="/Cliente/Excluir/1" class="btn btn-danger">Excluir</a>
                         </td>
-                </tr>
-                <tr>
+                    </tr>
+                    <tr>
                         <td scope="row">2</td>
-                        <td>Miniatura Usina São Martinho</td>
-                        <td>350</td>
+                        <td>Guilherme</td>
+                        <td>(XX)XXXXX-XXXX</td>
                         <td>
                             <a href="/Cliente/Editar/2" class="btn btn-warning">Editar</a>
                         </td>
-                        <td>
+                        <td> 
                             <a href="/Cliente/Excluir/2" class="btn btn-danger">Excluir</a>
                         </td>
-                 </tr>
-                 <tr>
-                        <th scope="row">3</th>
-                        <td>Cerveja Antartica BOA !</td>
-                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">3</td>
+                        <td>Matheus</td>
+                        <td>(XX)XXXXX-XXXX</td>
                         <td>
                             <a href="/Cliente/Editar/3" class="btn btn-warning">Editar</a>
                         </td>
-                        <td>
+                        <td> 
                             <a href="/Cliente/Excluir/3" class="btn btn-danger">Excluir</a>
                         </td>
-                  </tr>
-                  
-               
-            </tbody>
+                    </tr>
+
+
+                </tbody>
             </table>
         </div>
     </div>
-    
+
 </div>

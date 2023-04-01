@@ -2,7 +2,7 @@
 
 namespace WebApp_Noite.Controllers
 {
-    public class ProdutoController : Controller
+    public class ClienteController : Controller
     {
         public IActionResult Cadastrar()
         {
