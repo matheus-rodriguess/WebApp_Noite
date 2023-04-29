@@ -3,6 +3,7 @@
 *@
 @{
 }
+@model List<WebApp_Noite.Models.ClientesModel>
 
 <div class="row">
 
@@ -50,41 +51,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td scope="row">1</td>
-                        <td>Emertinho Manager</td>
-                        <td>(XX)XXXXX-XXXX</td>
-                        <td>
-                            <a href="/Cliente/Editar/1" class="btn btn-warning">Editar</a>
-                        </td>
-                        <td> 
-                            <a href="/Cliente/Excluir/1" class="btn btn-danger">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td scope="row">2</td>
-                        <td>Guilherme</td>
-                        <td>(XX)XXXXX-XXXX</td>
-                        <td>
-                            <a href="/Cliente/Editar/2" class="btn btn-warning">Editar</a>
-                        </td>
-                        <td> 
-                            <a href="/Cliente/Excluir/2" class="btn btn-danger">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td scope="row">3</td>
-                        <td>Matheus</td>
-                        <td>(XX)XXXXX-XXXX</td>
-                        <td>
-                            <a href="/Cliente/Editar/3" class="btn btn-warning">Editar</a>
-                        </td>
-                        <td> 
-                            <a href="/Cliente/Excluir/3" class="btn btn-danger">Excluir</a>
-                        </td>
-                    </tr>
-
-
+                    @foreach (var cliente in Model)
+                    {
+                        <tr>
+                            <td>@cliente.Id</td>
+                            <td>@cliente.Nome</td>
+                            <td>@cliente.Telefone</td>
+                            <td>
+                                <a href="/Cliente/Editar/@cliente.Id" class="btn btn-warning">Editar</a>
+                            </td>
+                            <td>
+                                <a href="/Cliente/Excluir/@cliente.Id" class="btn btn-danger">Excluir</a>
+                            </td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>

@@ -1,9 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-@model WebApp_Noite.Models.ClientesModel
+﻿@model WebApp_Noite.Models.ProdutoModel
 
 <div class="row">
     <div class="col-4">
@@ -11,18 +6,22 @@
     <div class="col-4">
         <div class="card">
             <div class="card-header">
-                <h2>Cadastro de Clientes</h2>
+                <h2>Editar Dados do Produto</h2>
             </div>
             <div class="card-body">
-                <form action="/Cliente/SalvarDados" method="post">
+                <form action="/Produto/SalvarProdutos" method="post">
                     <div class="mb-3">
+                        <label>Id</label>
+                        <input readonly name="Id" value="@Model.Id" class="form-control" />
+                        <br />
+
                         <label>Nome</label>
-                        <input type="text" name="Nome" class="form-control" />
+                        <input type="text" value="@Model.Nome" name="Nome" class="form-control" />
                     </div>
 
                     <div class="mb-3">
                         <label>Telefone</label>
-                        <input type="tel" name="Telefone" class="form-control" />
+                        <input type="number" value="@Model.QtdEstoque" name="QtdEstoque" class="form-control" />
                     </div>
                     <div class="container_botoes">
                         <div class="mb-3">
