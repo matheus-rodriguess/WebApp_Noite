@@ -10,5 +10,7 @@ namespace WebApp_Noite
             :base(opt) { }
 
         public DbSet<Categorias> Categorias { get; set; }
+
+        public DbSet<Produtos> Produtos { get; set; }
     }
 }

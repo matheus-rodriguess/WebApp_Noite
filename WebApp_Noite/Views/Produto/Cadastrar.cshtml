@@ -23,6 +23,16 @@
                     <div class="mb-3">
                         <label>Quantidade em Estoque</label>
                         <input type="number" name="QtdEstoque" class="form-control" />
+                        <br />
+
+                        <select name="CategoriaId" class="form-control">
+                            @foreach(var categoria in Model.TodasCategorias)
+                            {
+                                <option value ="@categoria.Id">
+                                    @categoria.Nome
+                                </option>
+                            }
+                        </select>
                     </div>
                         <div class="container_botoes">
                             <div class="mb-3">

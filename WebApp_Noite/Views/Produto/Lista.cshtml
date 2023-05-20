@@ -3,7 +3,7 @@
 *@
 @{
 }
-@model List<WebApp_Noite.Models.ProdutoModel>
+@model List<WebApp_Noite.Tabelas.Produtos>
 <div class="row"> 
     
     <div class="col-12">
@@ -11,8 +11,9 @@
             <h2>Lista de Produtos</h2>
         </div>
         <div class="card-body">
-
+             <form action="/Produto/Lista" method="GET">
             <div class=" row">
+               
                 <div class="col-2">
                     <a href="/Produto/Cadastrar" class="btn btn-success">
                         Novo Produto    
@@ -35,17 +36,19 @@
                     </button>
                 </div>
             </div>
+            </form>
             
             <form action="/Produto/Pesquisa" method="get">
                 
             </form>
+
 
             <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">Código</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Quantida em estoque</th>
+                    <th scope="col">Quantidade em estoque</th>
                     <th scope="col">Editar</th>
                     <th scope="col">Excluir</th>
                 </tr>
@@ -55,8 +58,9 @@
                     {
                         <tr>
                             <th>@produto.Id</th>
-                            <td>@produto.Nome</td>
-                            <td>@produto.QtdEstoque</td>
+                            <td>@produto.Descricao</td>
+                            <td>@produto.Valor</td>
+                            <td>@produto.Categoria.Nome</td>
                             <td>
                                 <a href="/Produto/EditarProduto/@produto.Id" class="btn btn-warning">Editar</a>
                             </td>
